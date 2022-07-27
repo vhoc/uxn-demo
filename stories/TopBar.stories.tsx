@@ -10,4 +10,10 @@ const meta: Meta = {
 
 export default meta
 
-export const Default = () => <TopBar menus={menuItems} />
+const Template: Story<Props> = args => <TopBar {...args} />
+
+export const Default = Template.bind({})
+Default.args = {
+    menus: menuItems,
+    children: 'This is a nav item',
+}

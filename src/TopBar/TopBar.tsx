@@ -1,18 +1,21 @@
-import React, { HTMLAttributes } from 'react'
+import React, { ReactNode, HTMLAttributes } from 'react'
 import { Properties } from '../data'
+import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
 import './TopBar.css'
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
-    menus: Properties[]
+    children?: ReactNode
+    menus?: Properties[]
 }
 
-export const TopBar = ({menus, ...props}: Props) => {
+export const TopBar = ({menus = [{ icon: faTimes, title: `No menus found` }], ...props}: Props) => {
   return (
     <div className='nav-area' {...props}>
         <nav>
             <ul className='menus'>
             {
+                menus &&
                 menus.map((menu, index) => {
                     return (
                         <li className='menu-items' key={index}>
