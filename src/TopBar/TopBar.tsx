@@ -1,27 +1,25 @@
-import React from 'react'
-import { DropDown } from '../DropDown/DropDown'
-// Test Data
-import { menuItems, Properties } from '../data'
+import React, { HTMLAttributes } from 'react'
+import { Properties } from '../data'
 
-export const TopBar = (): JSX.Element => {
+import './TopBar.css'
 
-    const depthLevel = 0
+export interface Props extends HTMLAttributes<HTMLDivElement> {
+    menus: Properties[]
+}
 
+export const TopBar = ({menus, ...props}: Props) => {
   return (
-    <div className='nav-area'>
+    <div className='nav-area' {...props}>
         <nav>
             <ul className='menus'>
             {
-                menuItems.length >= 1 ? (
-                    menuItems.map((menu: Properties, index: number) => {
-                        return (
-                            <DropDown variant={'primary'} items={menu} key={index} depthLevel={depthLevel}/>
-                        )
-                    })
-                ) : (
-                    `Sin elementos`
-                )
-                
+                menus.map((menu, index) => {
+                    return (
+                        <li className='menu-items' key={index}>
+                            <a href='#'>{menu.title}</a>
+                        </li>
+                    )
+                })
             }
             </ul>
         </nav>
