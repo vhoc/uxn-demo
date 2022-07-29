@@ -15,5 +15,6 @@ const Template: Story<Props> = args => <NavBar {...args} />
 export const Default = Template.bind({})
 Default.args = {
     menuItems: menuItems,
-    children: 'This is a nav item',
 }
+
+export const Empty = Template.bind({})

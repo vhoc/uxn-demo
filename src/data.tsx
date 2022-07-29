@@ -4,14 +4,21 @@ import {
     faPen,
     faTrashAlt,
     faPlusSquare,
-    faUserCircle
+    faUserCircle,
  } from "@fortawesome/free-solid-svg-icons"
 
+ import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
+
  export type Properties = {
-    icon?: any,
+    icon?: IconDefinition,
     title: string
     style?: object
     submenu?: Properties[]
+    action?: Function | null
+ }
+
+ export const testAlert = () => {
+    alert(`Test function.`)
  }
 
 export const menuItems: Properties[] = [
@@ -34,6 +41,7 @@ export const menuItems: Properties[] = [
                     {
                         icon: faUserCircle,
                         title: `Development Environment`,
+                        action: testAlert,
                     },
                     {
                         icon: faPlusSquare,
@@ -48,6 +56,7 @@ export const menuItems: Properties[] = [
             {
                 icon: faPen,
                 title: 'Edit workspace',
+                action: testAlert,
             },
             {
                 icon: faTrashAlt,
@@ -56,6 +65,7 @@ export const menuItems: Properties[] = [
                     color: 'red',
                 },
             },
-        ]
+        ],
+        action: null,
     },
 ]

@@ -10,7 +10,7 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
     menuItems?: Properties[]
 }
 
-export const NavBar = ({menuItems = [{ icon: faTimes, title: `No menus found` }], ...props}: Props) => {
+export const NavBar = ({menuItems = [{ icon: faTimes, title: `No menus found` }], ...props}: Props) : JSX.Element => {
 
     //console.warn(menuItems)
     const depthLevel: number = 0

@@ -8,7 +8,7 @@ export interface Props extends HTMLAttributes<HTMLUListElement> {
     depthLevel: number
 }
 
-export const DropDown = ({ submenus, dropdown, depthLevel, ...props}: Props) => {
+export const DropDown = ({ submenus, dropdown, depthLevel, ...props}: Props): JSX.Element => {
   depthLevel = depthLevel + 1
   const dropdownClass = depthLevel > 1 ? "dropdown-submenu" : ""
   return (

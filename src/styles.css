@@ -1,5 +1,22 @@
+@font-face {
+    font-family: "TitilliumWeb";
+    src: local("TitilliumWeb"),
+    url("./assets/fonts/TitilliumWeb/TitilliumWeb-Regular.ttf") format("truetype");
+}
+
+body, * {
+    margin: 0;
+    font-family: "TitilliumWeb", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif !important;
+      font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 nav {    
     border: 1px solid #d9d9d9;
+    height: 40px;
 }
 
 .nav-area {
@@ -30,16 +47,19 @@ nav {
     margin-block-end: 0;
     padding-inline-start: 0;
     width: 268px;
+    height: 40px;
     background-color: #fff;
 }
 
 nav {    
     border: 1px solid #d9d9d9;
+    
 }
 
 .menu-items {
     position: relative;
     font-size: 14px;
+    width: 268px;
   }
   
 .menu-items a {
