@@ -1,19 +1,19 @@
 import React from "react"
 import { Meta, Story } from '@storybook/react'
-import { TopBar, Props } from '../src/TopBar/TopBar'
+import { MenuItems, Props } from '../src/MenuItems/MenuItems'
 import { menuItems } from '../src/data'
 
 const meta: Meta = {
-    title: 'TopBar',
-    component: TopBar,
+    title: 'MenuItems',
+    component: MenuItems,
 }
 
 export default meta
 
-const Template: Story<Props> = args => <TopBar {...args} />
+const Template: Story<Props> = args => <MenuItems {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-    menus: menuItems,
+    items: menuItems[0].submenu,
     children: 'This is a nav item',
 }
