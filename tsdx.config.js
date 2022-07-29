@@ -1,6 +1,7 @@
 const postcss = require('rollup-plugin-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const url = require('@rollup/plugin-url')
 module.exports = {
   rollup(config, options) {
     config.plugins.push(
@@ -16,6 +17,12 @@ module.exports = {
         extract: !!options.writeMeta,
       })
     );
+    config.plugins.push(
+      url({
+        include: ['**/*.ttf'],
+        limit: Infinity,
+      }),
+    )
     return config;
   },
 };
