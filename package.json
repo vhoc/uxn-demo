@@ -1,5 +1,5 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "normalyze-react",
+  "name": "uxn-demo",
   "author": "Víctor Olvera",
   "module": "dist/normalyze-react.esm.js",
   "size-limit": [
