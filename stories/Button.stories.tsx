@@ -1,7 +1,6 @@
 import React from "react"
 import { Meta, Story } from '@storybook/react'
 import { Button, Props } from '../src/Button/Button'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCoffee } from "@fortawesome/free-solid-svg-icons"
 
 const meta: Meta = {

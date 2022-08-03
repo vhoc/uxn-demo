@@ -6,7 +6,6 @@ import {
     faPlusSquare,
     faUserCircle,
  } from "@fortawesome/free-solid-svg-icons"
-
  import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 
  export type Properties = {
@@ -67,5 +66,75 @@ export const menuItems: Properties[] = [
             },
         ],
         action: null,
+    },
+]
+
+export interface TtableRows {
+    id: number
+    projectName: string
+    scoreCards: number
+    assetsType: [number, string]
+    lastUpdate: string
+    createdBy: string
+}
+export const tableData: TtableRows[] = [
+    {
+        id: 1,
+        projectName: 'Compliance 2016-2021',
+        scoreCards: 12,
+        assetsType: [5,'json'],
+        lastUpdate: 'June 20, 2020',
+        createdBy: 'Ben Swanson',
+    },
+    {
+        id: 2,
+        projectName: 'Compliance 2016-2021',
+        scoreCards: 12,
+        assetsType: [5,'json'],
+        lastUpdate: 'June 20, 2020',
+        createdBy: 'Ben Swanson',
+    },
+    {
+        id: 3,
+        projectName: 'Compliance 2016-2021',
+        scoreCards: 12,
+        assetsType: [5,'json'],
+        lastUpdate: 'June 20, 2020',
+        createdBy: 'Ben Swanson',
+    },
+    {
+        id: 4,
+        projectName: 'Compliance 2016-2021',
+        scoreCards: 12,
+        assetsType: [5,'json'],
+        lastUpdate: 'June 20, 2020',
+        createdBy: 'Ben Swanson',
+    }
+]
+
+export interface TtableColumns {
+    label: string
+    [accessor: string]: string
+}
+export const tableColumns: TtableColumns[] =  [
+    {
+        label: 'Project Name',
+        accessor: 'projectName',
+    },
+    {
+        label: 'Scorecards',
+        accessor: 'scoreCards',
+    },
+    {
+        label: 'Assets/Type',
+        accessor: 'assetsType',
+    },
+    {
+        label: 'Last Update',
+        accessor: 'lastUpdate',
+    },
+    {
+        label: 'Created By',
+        accessor: 'createdBy',
     },
 ]

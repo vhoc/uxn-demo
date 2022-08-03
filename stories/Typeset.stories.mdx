@@ -4,12 +4,10 @@ import { Meta, Typeset} from '@storybook/addon-docs/blocks';
 
 export const typography = {
   type: {
-    regular: 'RobotoRegular, "Helvetica Neue", Helvetica, Arial, sans-serif',
-    medium: 'RobotoMedium, "Helvetica Neue", Helvetica, Arial, sans-serif',
-    bold: 'RobotoBold, "Helvetica Neue", Helvetica, Arial, sans-serif',
+    roboto: 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
   },
   weight: {
-    normal: '400',
+    regular: '400',
     medium: '500',
     bold: '700',
   },
@@ -47,9 +45,9 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
     Number(typography.size.l2),
     Number(typography.size.l3),
   ]}
-  fontWeight={typography.weight.normal}
+  fontWeight={typography.weight.regular}
   sampleText={SampleText}
-  fontFamily={typography.type.regular}
+  fontFamily={typography.type.roboto}
 />
 
 ## Medium
@@ -65,9 +63,9 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
     Number(typography.size.l2),
     Number(typography.size.l3),
   ]}
-  fontWeight={typography.weight.normal}
+  fontWeight={typography.weight.medium}
   sampleText={SampleText}
-  fontFamily={typography.type.medium}
+  fontFamily={typography.type.roboto}
 />
 
 ## Bold
@@ -83,9 +81,9 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
     Number(typography.size.l2),
     Number(typography.size.l3),
   ]}
-  fontWeight={typography.weight.normal}
+  fontWeight={typography.weight.bold}
   sampleText={SampleText}
-  fontFamily={typography.type.bold}
+  fontFamily={typography.type.roboto}
 />
 
 <h1>h1. Heading</h1>
@@ -94,14 +92,14 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
 <h4>h4. Heading</h4>
 <h5>h5. Heading</h5>
 
-<p style={{ fontFamily: 'RobotoRegular' }}>Paragraph Regular</p>
-<p style={{ fontFamily: 'RobotoMedium' }}>Paragraph Medium</p>
-<p style={{ fontFamily: 'RobotoBold' }}>Paragraph Bold</p>
+<p style={{ fontWeight: typography.weight.regular }}>Paragraph Regular</p>
+<p style={{ fontWeight: typography.weight.medium }}>Paragraph Medium</p>
+<p style={{ fontWeight: typography.weight.bold }}>Paragraph Bold</p>
 
 <p><small>Small Regular</small></p>
-<p><small style={{ fontFamily: 'RobotoMedium' }}>Small Medium</small></p>
-<p><small style={{ fontFamily: 'RobotoBold' }}>Small bold</small></p>
+<p><small style={{ fontWeight: typography.weight.medium }}>Small Medium</small></p>
+<p><small style={{ fontWeight: typography.weight.bold  }}>Small bold</small></p>
 
-<p><small class="xs">Extra Small Regular</small></p>
-<p><small class="xs" style={{ fontFamily: 'RobotoMedium' }}>Extra Small Medium</small></p>
-<p><small class="xs" style={{ fontFamily: 'RobotoBold' }}>Extra Small bold</small></p>
+<p><small className="xs">Extra Small Regular</small></p>
+<p><small className="xs" style={{ fontWeight: typography.weight.medium }}>Extra Small Medium</small></p>
+<p><small className="xs" style={{ fontWeight: typography.weight.bold  }}>Extra Small bold</small></p>
