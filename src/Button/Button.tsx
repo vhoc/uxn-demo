@@ -35,10 +35,10 @@ export const Button = ({ variant = 'primary', size = 'md', disabled = false, ico
 
     return (
         <button style={componentStyle(hover)} disabled={disabled} {...props} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-            <span style={{ display: 'flex', justifyContent: icon ? 'space-between' : 'center' }}>                
-                <span style={{ width: '100%' }}>{ label }</span>
-                { icon && (<span><FontAwesomeIcon icon={icon} /></span>) }
-            </span>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>                
+                { label }
+                { icon && (<FontAwesomeIcon icon={icon} />) }
+            </div>
         </button>
         )
 
