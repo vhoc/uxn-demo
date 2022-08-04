@@ -18,9 +18,11 @@ export interface Props extends HTMLAttributes<HTMLTableElement> {
 export const DataTable = ({columns, rows, tableStyle = {}, headingRowStyle = {}, rowStyle = {}, headingStyle = {}, cellStyle = {}, rowsPerPage = 10, ...props}: Props): JSX.Element => {
 
     const [activePage, setActivePage] = useState<number>(1)
+    const [optionRowsPerPage, setOptionRowsPerPage] = useState<number>(rowsPerPage)
+
     const count: number = rows.length
-    const totalPages: number = Math.ceil(count / rowsPerPage)
-    const calculatedRows = rows.slice((activePage - 1) * rowsPerPage, activePage * rowsPerPage)
+    const totalPages: number = Math.ceil(count / optionRowsPerPage)
+    const calculatedRows = rows.slice((activePage - 1) * optionRowsPerPage, activePage * optionRowsPerPage)
 
     return (
         <table cellPadding={0} cellSpacing={0} {...props} style={tableStyle}>
@@ -57,9 +59,10 @@ export const DataTable = ({columns, rows, tableStyle = {}, headingRowStyle = {},
                         <Pagination
                             activePage={activePage}
                             count={count}
-                            rowsPerPage={rowsPerPage}
+                            rowsPerPage={optionRowsPerPage}
                             totalPages={totalPages}
                             setActivePage={setActivePage}
+                            setOptionRowsPerPage={setOptionRowsPerPage}
                         />
                     </td>
                 </tr>
