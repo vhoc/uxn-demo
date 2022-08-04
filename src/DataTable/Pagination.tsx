@@ -1,4 +1,4 @@
-import React, { Dispatch, HTMLAttributes } from 'react'
+import React, { Dispatch, HTMLAttributes, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStepBackward, faStepForward, faForward, faBackward } from '@fortawesome/free-solid-svg-icons'
 import '../styles.css'
@@ -17,7 +17,13 @@ export const Pagination = ({ activePage, count, rowsPerPage, totalPages, setActi
     const end = activePage === totalPages ? count : beginning + rowsPerPage - 1
 
     return (
-        <>
+        <div className='pagination-container'>
+            <div>
+                
+                <div>
+                    Showing {beginning === end ? end : `${beginning} - ${end}`} of {count} results
+                </div>
+            </div>
             <div className='pagination' {...props}>
 
                 <button
@@ -54,9 +60,6 @@ export const Pagination = ({ activePage, count, rowsPerPage, totalPages, setActi
 
             </div>
 
-            <div>[DEBUG] Page {activePage} of {totalPages}</div>
-            <div>[DEBUG] Rows: {beginning === end ? end : `${beginning} - ${end}`} of {count}</div>
-
-        </>
+        </div>
     )
 }
