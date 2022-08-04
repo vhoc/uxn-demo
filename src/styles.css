@@ -154,6 +154,7 @@ thead th {
     background-color: #f1f5f9;
     text-transform: uppercase;
     color: #94a3b8;
+    font-size: 0.9rem;
 }
 
 tbody tr:nth-child(odd) {
@@ -178,3 +179,27 @@ th, td {
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-pagination {
+    width: 40px;
+    height: 40px;
+    background-color: #f8fafc;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+}
+.btn-pagination:disabled { color: #e0e3e8; }
+
+.btn-pagination-first, .btn-pagination-last {
+    border: none;
+    background-color: #fff;
+}
+
+.btn-pagination-previous { border-radius: 5px 0 0 5px; }
+.btn-pagination-next { border-radius: 0 5px 5px 0; }

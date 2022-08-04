@@ -4,7 +4,7 @@ import { Button, Props } from '../src/Button/Button'
 import { faCoffee } from "@fortawesome/free-solid-svg-icons"
 
 const meta: Meta = {
-    title: 'Button',
+    title: 'UI Components/Button',
     component: Button,
 }
 

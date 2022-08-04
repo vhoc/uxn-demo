@@ -4,7 +4,7 @@ import { NavBar, Props } from '../src/NavBar/NavBar'
 import { menuItems } from '../src/data'
 
 const meta: Meta = {
-    title: 'NavBar',
+    title: 'UI Components/NavBar',
     component: NavBar,
 }
 

@@ -4,7 +4,7 @@ import { DataTable, Props } from '../src/DataTable/DataTable'
 import { tableColumns, tableData } from "../src/data"
 
 const meta: Meta = {
-    title: 'DataTable',
+    title: 'Data output/DataTable',
     component: DataTable,
 }
 
@@ -16,4 +16,5 @@ export const Default = Template.bind({})
 Default.args = {
     columns: tableColumns,
     rows: tableData,
+    rowsPerPage: 3,
 }
