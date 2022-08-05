@@ -14,11 +14,31 @@ Run the following command to install the library in your react project:
 npm install --save uxn-demo
 ```
 
-### Import the required styles.
+### Stylesheet.
 You need to import the styles in your index.js or App.js depending on your React project structure:
 ```
 import 'uxn-demo/dist/uxn-demo.cjs.development.css'
 ```
 
 ### Importing Components.
-You should import individual Components
+Import individual components before using them in your render code, like so:
+```
+import { Button } from 'uxn-demo';
+```
+This is how the complete code would look:
+```
+import { Button } from 'uxn-demo';
+
+const App = () => {
+  return (
+    <div className="App">
+
+      <Button>Hello world!</Button>
+
+    </div>
+  );
+}
+
+export default App;
+```
+Refer to each component's documentation for instructions on how to import and use them.

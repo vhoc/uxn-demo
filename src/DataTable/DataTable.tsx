@@ -55,7 +55,7 @@ export const DataTable = ({columns, rows, tableStyle = {}, headingRowStyle = {},
             </tbody>
             <tfoot>
                 <tr>
-                    <td colSpan={columns.length}>
+                    <td className="table-footer" colSpan={columns.length}>
                         <Pagination
                             activePage={activePage}
                             count={count}

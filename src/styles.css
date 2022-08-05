@@ -18,12 +18,10 @@ body, * {
 
 nav {    
     border: 1px solid #d9d9d9;
-    height: 40px;
 }
 
 .nav-area {
     width: 100%;
-    height: 40px;
     background-color: #fff;
     color: #000;
     display: flex;
@@ -53,11 +51,6 @@ nav {
     background-color: #fff;
 }
 
-nav {    
-    border: 1px solid #d9d9d9;
-    
-}
-
 .menu-items {
     position: relative;
     font-size: 14px;
@@ -83,7 +76,7 @@ nav {
 .menu-items a,
 .menu-items button {
     text-align: left;
-    padding: 0.7rem 1rem;
+    padding: 0.84rem 1rem;
 }
 
 .menu-items a:hover,
@@ -186,6 +179,10 @@ th, td {
     padding-bottom: 15px;
 }
 
+.table-footer {
+    background-color: #fff;
+}
+
 .pagination-container {
     display: flex;
     justify-content: space-between;
@@ -214,11 +211,17 @@ th, td {
 
 .btn-pagination-first, .btn-pagination-last {
     border: none;
+    border-radius: 100%;
     background-color: #fff;
 }
+.btn-pagination-first:active, .btn-pagination-last:active {
+    color: black;
+}
 
-.btn-pagination-previous { border-radius: 5px 0 0 5px; }
+.btn-pagination-previous {border-radius: 5px 0 0 5px; }
+.btn-pagination-previous:active { background-color: #f1f5f9 }
 .btn-pagination-next { border-radius: 0 5px 5px 0; }
+.btn-pagination-next:active { background-color: #f1f5f9 }
 
 .pagination-rows-select {
     width: 100%;
@@ -295,9 +298,9 @@ option {
 }
 
 pre {
-    background: #f4f4f4;
+    background: #cdcdff;
     border: 1px solid #ddd;
-    border-left: 3px solid #f36d33;
+    border-left: 3px solid #0000ff;
     color: #666;
     page-break-inside: avoid;
     font-family: monospace;
