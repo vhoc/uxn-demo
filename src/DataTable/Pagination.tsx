@@ -1,4 +1,4 @@
-import React, { Dispatch, HTMLAttributes, useState } from 'react'
+import React, { Dispatch, HTMLAttributes } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStepBackward, faStepForward, faForward, faBackward } from '@fortawesome/free-solid-svg-icons'
 import '../styles.css'

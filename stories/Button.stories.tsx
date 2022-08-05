@@ -13,30 +13,36 @@ export default meta
 const Template: Story<Props> = args => <Button {...args} />
 
 export const Default = Template.bind({})
+Default.args = {
+    variant: 'primary',
+    size: 'md',
+    children: 'Button'
+}
 
 export const Primary = Template.bind({})
 Primary.args = {
     variant: 'primary',
     size: 'md',
-    label: 'primary button',
+    children: 'primary button',
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
     variant: 'secondary',
     size: 'md',
-    label: 'secondary button',
+    children: 'secondary button',
 }
 
 export const Disabled = Template.bind({})
 Disabled.args = {
     variant: 'primary',
     size: 'md',
-    label: 'disabled button',
+    children: 'disabled button',
     disabled: true,
 }
 
 export const Icon = Template.bind({})
 Icon.args = {
+    children: 'Button',
     icon: faCoffee,
 }

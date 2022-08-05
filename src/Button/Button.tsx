@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, useState } from 'react'
+import React, { HTMLAttributes, useState, ReactNode } from 'react'
 import { variants, sizes } from '../Style'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
@@ -9,9 +9,10 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
     disabled?: boolean
     icon?: IconProp
     label?: string
+    children?: ReactNode
 }
 
-export const Button = ({ variant = 'primary', size = 'md', disabled = false, icon, label = 'button', ...props }: Props): JSX.Element => {
+export const Button = ({ variant = 'primary', size = 'md', disabled = false, icon, label = 'button', children, ...props }: Props): JSX.Element => {
 
     const [hover, setHover] = useState<boolean>(false)
 
@@ -36,7 +37,7 @@ export const Button = ({ variant = 'primary', size = 'md', disabled = false, ico
     return (
         <button style={componentStyle(hover)} disabled={disabled} {...props} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>                
-                { label }
+                { children }
                 { icon && (<FontAwesomeIcon icon={icon} />) }
             </div>
         </button>
