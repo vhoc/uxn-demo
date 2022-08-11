@@ -362,3 +362,50 @@ pre {
 .context-menu-item-icon {
     color: #64748B;
 }
+
+.alert-container {
+    width: 512px;
+    border: 1px solid #D5D7DB;
+    box-shadow: 1px 1px 9px -1px rgba(47,57,77,0.43);
+    -webkit-box-shadow: 1px 1px 9px -1px rgba(47,57,77,0.43);
+    -moz-box-shadow: 1px 1px 9px -1px rgba(47,57,77,0.43);
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.alert-container-upper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.alert-container-middle {
+    display: flex;
+    margin-left: 40px;
+    margin-top: -22px;
+}
+
+.alert-container-text {
+    display: flex;
+    margin-left: 80px;
+    margin-right: 24px;
+}
+
+.alert-container-footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 16px;
+    background-color: #F8FAFC;
+    height: 61px;
+    margin-top: 15px;
+    padding-left: 23px;
+    padding-right: 23px;
+}

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
-    variant?: 'primary' | 'secondary' | 'warning' | 'danger' | 'cancel'
+    variant?: 'primary' | 'secondary' | 'warning' | 'danger' | 'cancel' | 'success' | 'info'
     size?: 'sm' | 'md' | 'lg'
     disabled?: boolean
     icon?: IconProp
@@ -30,6 +30,8 @@ export const Button = ({ variant = 'primary', size = 'md', disabled = false, ico
         minWidth: sizes[selectedSize].minWidth,
         height: sizes[selectedSize].height,
         fontSize: sizes[selectedSize].fontSize,
+        paddingLeft: sizes[selectedSize].paddingLeft,
+        paddingRight: sizes[selectedSize].paddingRight,
         borderRadius: '4px',
         cursor: disabled ? 'not-allowed' : 'pointer',
     })
@@ -38,6 +40,7 @@ export const Button = ({ variant = 'primary', size = 'md', disabled = false, ico
         <button style={componentStyle(hover)} disabled={disabled} {...props} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>                
                 { children }
+
                 { icon && (<FontAwesomeIcon icon={icon} />) }
             </div>
         </button>
