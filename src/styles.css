@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 *,
 *::before,
@@ -8,7 +9,7 @@
 
 body, * {
     margin: 0;
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif !important;
       font-size: 14px;
@@ -218,10 +219,20 @@ th, td {
     color: black;
 }
 
+.btn-pagination-current {
+    border: 1px solid #535ADF;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.btn-pagination-current-previous, .btn-pagination-current-next {
+    color: #64748B;
+}
+
 .btn-pagination-previous {border-radius: 5px 0 0 5px; }
-.btn-pagination-previous:active { background-color: #f1f5f9 }
+.btn-pagination-previous:active, .btn-pagination-current-previous:active { background-color: #f1f5f9 }
 .btn-pagination-next { border-radius: 0 5px 5px 0; }
-.btn-pagination-next:active { background-color: #f1f5f9 }
+.btn-pagination-next:active, .btn-pagination-current-next:active { background-color: #f1f5f9 }
 
 .pagination-rows-select {
     width: 100%;
@@ -312,4 +323,42 @@ pre {
     padding: 1em 1.5em;
     display: block;
     word-wrap: break-word;
+}
+
+.context-menu-container {
+    min-width: 195px;
+    max-width: fit-content;
+    border: 1px solid #D5D7DB;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 14px;
+    box-shadow: 1px 1px 9px -1px rgba(47,57,77,0.43);
+    -webkit-box-shadow: 1px 1px 9px -1px rgba(47,57,77,0.43);
+    -moz-box-shadow: 1px 1px 9px -1px rgba(47,57,77,0.43);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: #1E293B;
+}
+
+.context-menu-item {
+    width: 195px;
+    min-width: 195px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #1E293B;
+}
+
+.context-menu-item > button {
+    border-radius: 8px;
+    color: #1E293B;
+    width: 195px;
+    min-width: 195px;
+    display: flex;
+}
+
+.context-menu-item-icon {
+    color: #64748B;
 }

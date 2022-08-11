@@ -59,6 +59,40 @@ export const Pagination = ({ activePage, count, rowsPerPage, totalPages, setActi
                 </button>
 
                 <button
+                    className='btn-pagination btn-pagination-current-previous'
+                    onClick={ () => {
+                        if ( activePage > 1 ) {
+                            setActivePage(activePage - 1)
+                        }
+                    }}
+                >
+                    {
+                        activePage > 1 &&
+                            (activePage - 1).toString()
+                    }
+                </button>
+
+                <button
+                    className='btn-pagination btn-pagination-current'
+                >
+                    {activePage.toString()}
+                </button>
+
+                <button
+                    className='btn-pagination btn-pagination-current-next'
+                    onClick={ () => {
+                        if ( activePage < totalPages ) {
+                            setActivePage(activePage + 1)
+                        }
+                    }}
+                >
+                    {
+                        activePage < totalPages &&
+                            (activePage + 1).toString()
+                    }
+                </button>
+
+                <button
                     className='btn-pagination btn-pagination-next'
                     disabled={activePage === totalPages}
                     onClick={() => setActivePage(activePage + 1)}

@@ -4,8 +4,8 @@ import { Meta, Typeset } from '@storybook/addon-docs/blocks';
 
 export const typography = {
   type: {
-    roboto: 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
-  },
+    inter: 'Inter, "Helvetica Neue", Helvetica, Arial, sans-serif',
+  },  
   weight: {
     regular: '400',
     medium: '500',
@@ -28,7 +28,7 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
 
 # Typography
 
-**Font:** Roboto
+**Font:** Inter
 
 **Weights:** 400(regular), 500(medium), 700(bold)
 
@@ -47,7 +47,7 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
   ]}
   fontWeight={typography.weight.regular}
   sampleText={SampleText}
-  fontFamily={typography.type.roboto}
+  fontFamily={typography.type.inter}
 />
 
 ## Medium
@@ -65,7 +65,7 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
   ]}
   fontWeight={typography.weight.medium}
   sampleText={SampleText}
-  fontFamily={typography.type.roboto}
+  fontFamily={typography.type.inter}
 />
 
 ## Bold
@@ -83,7 +83,7 @@ export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing el
   ]}
   fontWeight={typography.weight.bold}
   sampleText={SampleText}
-  fontFamily={typography.type.roboto}
+  fontFamily={typography.type.inter}
 />
 
 <h1>h1. Heading</h1>
