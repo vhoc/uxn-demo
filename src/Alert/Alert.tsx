@@ -1,8 +1,9 @@
 import React, { HTMLAttributes } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInfo } from '@fortawesome/free-solid-svg-icons'
+import { faInfo, faExclamation, faExclamationTriangle, faCheck, IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import { Button } from '../Button/Button'
 import { variants } from '../Style'
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
 
 
 export interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -24,6 +25,17 @@ export const Alert = ({variant = 'info', title, subtitle, text, confirmationButt
         color: variants[selectedVariant].alertIconFgColor
     }
 
+    interface IIcons {
+        [key: string]: IconProp
+    }
+
+    const icons: IIcons = {
+        success: faCheck,
+        warning: faExclamation,
+        danger: faExclamationTriangle,
+        info: faInfo,
+    }
+
     return (
         <div className='alert-container' {...props}>
 
@@ -38,7 +50,7 @@ export const Alert = ({variant = 'info', title, subtitle, text, confirmationButt
                     ...componentStyle
                 }}>
                     <FontAwesomeIcon
-                        icon={faInfo}
+                        icon={ icons[selectedVariant] }
                         color={componentStyle.color}
                     />
                 </span>
