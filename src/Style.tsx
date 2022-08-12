@@ -29,6 +29,8 @@ export const variants: IVariant = {
         buttonBgColorHover: '#4248b2',
         buttonFgColor: '#fff',
         buttonBorderColor: '#525ae0',
+        alertIconBgColor: '#DDDEF9',
+        alertIconFgColor: '#4248B2',
     },
     secondary: {
         buttonBgColor: '#fff',

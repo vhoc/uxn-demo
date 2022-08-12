@@ -409,3 +409,17 @@ pre {
     padding-left: 23px;
     padding-right: 23px;
 }
+
+.badge {
+    height: 19px;
+    min-width: 19px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+    cursor: default;
+}

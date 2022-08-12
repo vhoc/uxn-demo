@@ -6,7 +6,9 @@ import {
     faPlusSquare,
     faUserCircle,
  } from "@fortawesome/free-solid-svg-icons"
- import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
+import { Badge } from "./Badge/Badge"
+import React, { ReactElement } from "react"
 
  export type Properties = {
     icon?: IconDefinition,
@@ -73,7 +75,7 @@ export interface TtableRows {
     id: number
     projectName: string
     scoreCards: number
-    assetsType: [number, string]
+    assetsType: [number, ReactElement]
     lastUpdate: string
     createdBy: string
 }
@@ -82,7 +84,7 @@ export const tableData: TtableRows[] = [
         id: 1,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="success" label="json" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     },
@@ -90,7 +92,7 @@ export const tableData: TtableRows[] = [
         id: 2,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="success" label="csv" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     },
@@ -98,7 +100,7 @@ export const tableData: TtableRows[] = [
         id: 3,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="primary" label="csv" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     },
@@ -106,7 +108,7 @@ export const tableData: TtableRows[] = [
         id: 4,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="warning" label="csv" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     },
@@ -114,7 +116,7 @@ export const tableData: TtableRows[] = [
         id: 5,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="danger" label="csv" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     },
@@ -122,7 +124,7 @@ export const tableData: TtableRows[] = [
         id: 6,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="success" label="csv" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     },
@@ -130,7 +132,7 @@ export const tableData: TtableRows[] = [
         id: 7,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="danger" label="csv" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     },
@@ -138,7 +140,7 @@ export const tableData: TtableRows[] = [
         id: 8,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="warning" label="csv" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     },
@@ -146,7 +148,7 @@ export const tableData: TtableRows[] = [
         id: 9,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="primary" label="csv" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     },
@@ -154,7 +156,7 @@ export const tableData: TtableRows[] = [
         id: 10,
         projectName: 'Compliance 2016-2021',
         scoreCards: 12,
-        assetsType: [5,'json'],
+        assetsType: [5,<Badge variant="success" label="csv" />],
         lastUpdate: 'June 20, 2020',
         createdBy: 'Ben Swanson',
     }

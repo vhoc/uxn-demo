@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInfo, faExclamation, faExclamationTriangle, faCheck, IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import { faInfo, faExclamation, faExclamationTriangle, faCheck } from '@fortawesome/free-solid-svg-icons'
 import { Button } from '../Button/Button'
 import { variants } from '../Style'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
