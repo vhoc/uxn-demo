@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/34px/Graph/App-generic</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/34px/Graph/App-generic">
+            <rect id="Rectangle" fill="#F1F4FB" x="0" y="0" width="34" height="34" rx="4"></rect>
+            <g id="" transform="translate(7.000000, 8.750000)" fill="#658BD3" fill-rule="nonzero">
+                <path d="M0,0 L20,0 L20,17.5 L0,17.5 L0,0 Z M6.25,2.8125 L6.25,4.6875 L17.5,4.6875 L17.5,2.8125 L6.25,2.8125 Z M5,2.5 L2.5,2.5 L2.5,5 L5,5 L5,2.5 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
